@@ -9,4 +9,23 @@ body {
 }
 
 */
+element.style {
+}
+body {
+background: white;
+}
+html, body {
+height: 100%;
+}
+body {
+margin: 0;
+}
+* {
+margin: 0;
+padding: 0;
+}
+user agent stylesheetbody {
+display: block;
+margin: 8px;
+}
 

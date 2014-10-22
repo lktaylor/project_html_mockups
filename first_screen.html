@@ -19,27 +19,361 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <p class="lead">First screen. This is a p tag with a class of lead. Just throwing it in to make sure that the template is loading Bootstrap assets correctly. Replace this content with your own.</p>
 
-        <div class="btn-group"> <!-- Wrapping a set of <a> tags with btn classes in a <div> of class btn-group joins them together into a bar -->
-          <a href="first_screen.html" class="btn btn-primary">
-            <i class="fa fa-external-link"></i> <!-- Example of how to use Font Awesome icons; often, we use them as text within buttons -->
-            Show
+ <body class="hover-on home-domain unspecified-page ff_assessment_typeahead ff_hide_wishlist ff_user_service_auth ff_shipping_validation_mobile ff_header_clearance_link ff_qu_revised_header ff_shopping_bag_v2 ff_accessory_categories_revised ff_self_service_order_history ff_showroom_site_rebrand ff_final_boss_datepicker ff_grid_ad_units ff_shop_revised_pdp ff_shop_revised_pdp_carousels ff_queue_ci ff_queue_public_launch ff_qu_revised_nav ff_shipping_validation_desktop ff_self_service_change_size ff_self_service_tooltip ff_cx_narvar_ups ff_terms_of_service ff_shop_accessory_affinity_link ff_pdp_imagery ff_queue ff_pro_and_shipping_cost_in_bag_experiment ff_pro_price_up ff_assessment_shortlist_creation ff_pdp_pro_add_to_bag ff_self_service_desktop ff_reb_about_us ff_geo_targeted_wells ff_second_style_cta ff_cx_cicreditsrefund ff_ciadmin_recalc ff_help_center_faq ff_more_user_sizes ff_cx_narvar_ux ff_reb_nav_menus ff_accessory_featured_sort ff_ciadmin_new_payments ff_pro_settings ff_cx_cancelbutton_design ff_post_checkout_mystery_bling ff_ttb_test ux-initialized ux-initialized experiment-1-3 experiment-2-2 experiment-4-2 experiment-7-3 experiment-9-1 experiment-13-1 experiment-15-2 experiment-16-2 experiment-18-1 experiment-19-2 experiment-20-1 experiment-21-1 experiment-22-1 experiment-23-2 experiment-24-1 experiment-26-2 experiment-27-2 experiment-30-2 experiment-31-2 experiment-32-1 experiment-35-2 experiment-37-1 experiment-38-2 experiment-39-2 experiment-44-1 experiment-45-2 experiment-47-1 experiment-48-1 experiment-50-1 experiment-53-1 auth-status-anonymous non-pro-member">
+        <div id="reb-header" class="">
+  <div id="reb-header-unshaded">
+
+
+  <div id="masquerade-banner">
+
+  </div>
+
+    <div id="offer-banner"><div class="promo-bar">
+  ENJOY $25 OFF YOUR FIRST RENTAL ORDER OVER $50&nbsp;&nbsp;<a href="javascript:void(0)" class="pop-lr-registration white">Join Now</a>
+</div></div>
+    <div id="emergency-banner"></div>
+
+    <div id="reb-header-wrapper">
+
+
+  <ul id="user-menu">
+
+      <li id="user-menu-item-sign-in" class="user-menu-item">
+        <a class="user-menu-item-title sign-in pop-lr-signin usr-signin" href="javascript:void(0)">
+          <span class="user-menu-item-title-label">Sign in</span>
+        </a>
+      </li>
+
+    <li class="user-menu-item with-menu">
+      <a class="user-menu-item-title" href="enter a valid HTML">
+        <span class="user-menu-item-title-label">Help</span>
+      </a>
+    <li class="user-menu-item with-menu">
+      <a class="user-menu-item-title" href="enter a valid HTML">
+        <span class="user-menu-item-title-label">How it Works</span>
+      </a>
+    <li class="user-menu-item with-menu">
+      <a class="user-menu-item-title" href="enter a valid HTML">
+        <span class="user-menu-item-title-label">Contact Us</span>
+      </a>
+    <li class="user-menu-item with-menu">
+      <a class="user-menu-item-title" href="enter a valid HTML">
+        <span class="user-menu-item-title-label">FAQs</span>
+      </a>
+    <li class="user-menu-item">
+      <a class="user-menu-item-title" href="enter a valid HTML"Sign in to get the full experience">
+        <span class="heart-label">Hearts</span>
+
+      </a>
+
+    </li>
+    <li id="user-menu-item-queue" class="user-menu-item">
+      <a class="user-menu-item-title needsreg" href="enter a valid HTML" data-msg="Sign in to get the full experience">
+        <span class="user-menu-item-title-label">
+          Queue
+
+        </span>
+      </a>
+    </li>
+    <li class="user-menu-item" id="menu-item-my-bag">
+      <a class="user-menu-item-title needsreg user-menu-item-cart" href="javascript:void(0)">
+        <span class="user-menu-item-title-label">Bag</span>
+        <span class="cart-count">
+          0
+        </span>
+      </a>
+    </li>
+  </ul>
+
+
+  <div data-parent="#user-menu-item-account" class="user-menu-alert ss-tooltip shipping-status"></div>
+  <div data-parent="#user-menu-item-account" class="user-menu-alert ss-reviews-tooltip"></div>
+  <div data-parent="#user-menu-item-account" class="user-menu-alert pro-payment-failed-alert pro-tip"></div>
+  <div data-parent="#user-menu-item-queue" class="user-menu-alert queue-join-alert queue-tip" style="top: 40px; margin-left: 376.34375px;"></div>
+  <div data-parent="#user-menu-item-queue" class="user-menu-alert queue-low-alert queue-tip" style="top: 40px; margin-left: 376.34375px;"></div>
+
+<script type="text/template" id="tmpl-user-menu">
+  <ul id="user-menu">
+    <% if (hasProfile) { %>
+      <li id="user-menu-item-account" class="user-menu-item with-menu">
+        <a class="user-menu-item-title hd-reviews" href="enter valid HTML">
+          <span class="user-menu-item-title-label">My <%= isPro ? "PRO" : "" %> Account</span>
+        </a>
+        <div class="sub-menu <%= RTR.FF.isEnabled("self-service") ? "self-service" : "" %>">
+          <a href="enter valid HTML" data-source="myRentals">
+            <span class="sub-menu-item-label">Orders</span>
           </a>
-          <a href="second_screen.html" class="btn btn-warning">
-            <i class="fa fa-edit"></i>
-            Edit
+          <% if (isQueue || wasQueue) { %>
+            <a href="/enter valid HTML">
+              <span class="sub-menu-item-label">
+                Unlimited Settings
+              </span>
+            </a>
+          <% } %>
+          <% RTR.FF("pro_settings", function () { %>
+            <% if (isPro || wasPro) { %>
+              <a href="enter valid HTML">
+                  PRO Settings
+                </span>
+              </a>
+            <% } %>
+          <% }) %>
+          <a id="usr-reviews" href="enter valid HTML">
+            <span class="sub-menu-item-label">
+              Reviews
+              <% if (reviewsCount) { %>
+                <span id="user-reviews-count">(<%= reviewsCount %>)</span>
+              <% } %>
+            </span>
           </a>
-          <a href="third_screen.html" class="btn btn-danger">
-            <i class="fa fa-trash-o"></i>
-            Delete
+          <a href="enter valid HTML" data-source="myProfile">
+            <span class="sub-menu-item-label">Profile</span>
+          </a>
+          <% RTR.FF("quiz", function () { %>
+            <a href="/quiz?nav_location=user_account&amp;action=click_MyShop&amp;object_type=top_nav">
+              <span class="sub-menu-item-label">My Shop</span>
+            </a>
+          <% }) %>
+          <% if (RTR.FF.isEnabled("user_service_auth")) { %>
+            <a id="sign-out" href="enter valid HTML">
+              <span class="sub-menu-item-label">
+                Sign Out
+              </span>
+            </a>
+          <% } else { %>
+            <a id="sign-out" href="enter valid HTML">
+              <span class="sub-menu-item-label">
+                Sign Out
+              </span>
+            </a>
+          <% } %>
+        </div>
+      </li>
+    <% } else { %>
+      <li id="user-menu-item-sign-in" class="user-menu-item">
+        <a class="user-menu-item-title sign-in pop-lr-signin usr-signin" href="javascript:void(0)">
+          <span class="user-menu-item-title-label">Sign in</span>
+        </a>
+      </li>
+    <% } %>
+    <li class="user-menu-item with-menu">
+      <a class="user-menu-item-title" href="enter valid HTML">
+        <span class="user-menu-item-title-label">Help</span>
+      </a>
+      <div class="sub-menu">
+        <a href="enter valid HTML">
+          <span class="sub-menu-item-label">How it Works</span>
+        </a>
+        <a href="enter valid HTML">
+          <span class="sub-menu-item-label">Contact Us</span>
+        </a>
+        <a href="enter valid HTML">
+          <span class="sub-menu-item-label">FAQs</span>
+        </a>
+      </div>
+    </li>
+    <li class="user-menu-item">
+      <a class="user-menu-item-title" href="enter valid HTML">
+        <span class="heart-label">Hearts</span>
+        <% if (heartCount) { %>
+          <span class="heart-count"><%= heartCount %></span>
+        <% } %>
+      </a>
+      <% if (hasProfile && shortlists.length) { %>
+        <div class="sub-menu">
+          <a href="enter valid HTML" class="needsreg">
+            <span class="sub-menu-item-label">Hearts</span>
+          </a>
+          <% _.each(shortlists.slice(0, 5), function(shortlist) { %>
+            <a href="enter valid HTML">
+                <%= (shortlist.name || "").replace(/</g,"&lt;").replace(/>/g,"&gt;") %>
+              </span>
+            </a>
+          <% }); %>
+          <a href="enter valid HTML">
+              All Shortlists
+            </span>
           </a>
         </div>
+      <% } %>
+    </li>
+    <li id="user-menu-item-queue" class="user-menu-item">
+      <a class="user-menu-item-title needsreg" href="enter valid HTML"Sign in to get the full experience">
+        <span class="user-menu-item-title-label">
+          Queue
+          <% if (queueCount) { %>
+            <span class="queue-count">(<%= queueCount %>)</span>
+          <% } %>
+        </span>
+      </a>
+    </li>
+    <li class="user-menu-item" id="menu-item-my-bag">
+      <a class="user-menu-item-title needsreg user-menu-item-cart" href="javascript:void(0)">
+        <span class="user-menu-item-title-label">Bag</span>
+        <span class="cart-count">
+          <%= cartCount %>
+        </span>
+      </a>
+    </li>
+  </ul>
+</script>
+
+
+      <h1 id="nav-logo">
+        <a href="enter valid HTML">
+          Bump Borrow
+        </a>
+      </h1>
+
+      <ul id="nav">
+
+        <li class="nav-group with-menu">
+            <h2 class="nav-group-title">
+
+</ul>
+
+<form id="nav-search" action="/search/apachesolr_search/" method="get">
+    <label for="nav-search-query">Search</label>
+    <input type="text" name="query" id="nav-search-query">
+    <button>Search</button>
+</form>
+
+    </div>
+  </div>
+  <div id="reb-header-shade"></div>
+</div>
+
+<script type="text/template" id="tmpl-masquerade-banner">
+  <div id="masquerade-banner">
+    <% if (RTR.UX.isMasquerading()) { %>
+      You are masquerading as <span id="masquerading-user"><%= RTR.UX.getProfile().email %></span>!
+      <a href="/account/masquerade/unmask" class="unmask">(switch back)</a>
+    <% } %>
+  </div>
+</script>
+
+
+            <div id="hp-banner" class="queue-hero">
+  <style type="text/css">
+  .hero-banner {
+    background-image: url(//cdn.rtrcdn.com/sites/default/files/imgs/1015_HP_Hero.jpg);
+    background-position: center;
+    background-color: #FBFBFB;
+}
+
+/* ONLY CHANGE THIS IMAGE URL FOR RTR UNLIMITED HOME PAGE
+.queue-hero .hero-banner {
+    background-position: center;
+}
+
+ UNLIMITED BANNER A
+.experiment-44-1 .queue-hero .hero-banner {
+    background-image: url(//cdn.rtrcdn.com/sites/default/files/imgs/0723_unlimited_home_hero.jpg);
+}
+
+UNLIMITED BANNER B
+.experiment-44-2 .queue-hero .hero-banner {
+    background-image: url(//cdn.rtrcdn.com/sites/default/files/imgs/unlimited_home_hero_b2.jpg);
+}*/
+</style>
+
+<!-- Normal banner: http://cdn.rtrcdn.com/sites/default/files/banner_images/worlds-largest-designer-closet-banner.jpg -->
+<!-- https://cdn.rtrcdn.com/sites/default/files/Unlimited_HPHero.jpg -->
+<!-- To make this banner non-clickable, remove the <a> tags -->
+
+<a href="enter valid HTML"><div class="hero-banner"></div></a>
+  <div class="page-block">
+    <div id="hp-search-block">
+      <div id="hp-search" class="has-grid-cal reservation-hold">
+        <div id="hp-search-title" class="head2">Reserve a dress</div>
+        <div id="hp-search-subtitle"></div>
+          <div class="rescal-datepicker-wrapper" id="hp-date"> <!-- this id should go away.  just make sure styling works -->
+            <div class="final-boss reservation-date-control quick-link-date-picker delivery-date calendar-overlay">
+  <div class="quick-link-date-list-wrapper"></div>
+  <input class="datepicker" id="" placeholder="Delivery &amp; Return Dates" readonly="readonly" type="text">
+</div>
+          </div>
+          <div class="input-wrapper pretty-checkbox-set canonical-sizes">
+            <span class="label size-label empty" data-placeholder="Size">Size</span>
+            <div class="checkbox-set">
+              <div class="pretty-checkbox">
+                <input id="shortlist_availability_filters_sizes_0" name="shortlist[availability_filters][sizes]" type="checkbox" value="0"><label for="shortlist_availability_filters_sizes_0">0</label></div><div class="pretty-checkbox"><input id="shortlist_availability_filters_sizes_2" name="shortlist[availability_filters][sizes]" type="checkbox" value="2"><label for="shortlist_availability_filters_sizes_2">2</label></div><div class="pretty-checkbox"><input id="shortlist_availability_filters_sizes_4" name="shortlist[availability_filters][sizes]" type="checkbox" value="4"><label for="shortlist_availability_filters_sizes_4">4</label></div><div class="pretty-checkbox"><input id="shortlist_availability_filters_sizes_6" name="shortlist[availability_filters][sizes]" type="checkbox" value="6"><label for="shortlist_availability_filters_sizes_6">6</label></div><div class="pretty-checkbox"><input id="shortlist_availability_filters_sizes_8" name="shortlist[availability_filters][sizes]" type="checkbox" value="8"><label for="shortlist_availability_filters_sizes_8">8</label></div><div class="pretty-checkbox"><input id="shortlist_availability_filters_sizes_10" name="shortlist[availability_filters][sizes]" type="checkbox" value="10"><label for="shortlist_availability_filters_sizes_10">10</label></div><div class="pretty-checkbox"><input id="shortlist_availability_filters_sizes_12" name="shortlist[availability_filters][sizes]" type="checkbox" value="12"><label for="shortlist_availability_filters_sizes_12">12</label></div><div class="pretty-checkbox"><input id="shortlist_availability_filters_sizes_14" name="shortlist[availability_filters][sizes]" type="checkbox" value="14"><label for="shortlist_availability_filters_sizes_14">14</label></div><div class="pretty-checkbox"><input id="shortlist_availability_filters_sizes_16" name="shortlist[availability_filters][sizes]" type="checkbox" value="16"><label for="shortlist_availability_filters_sizes_16">16</label></div><div class="pretty-checkbox"><input id="shortlist_availability_filters_sizes_18" name="shortlist[availability_filters][sizes]" type="checkbox" value="18"><label for="shortlist_availability_filters_sizes_18">18</label></div><div class="pretty-checkbox"><input id="shortlist_availability_filters_sizes_20" name="shortlist[availability_filters][sizes]" type="checkbox" value="20"><label for="shortlist_availability_filters_sizes_20">20</label></div><div class="pretty-checkbox"><input id="shortlist_availability_filters_sizes_22" name="shortlist[availability_filters][sizes]" type="checkbox" value="22"><label for="shortlist_availability_filters_sizes_22">22</label>
+              </div>
+            </div>
+          </div>
+        <input type="text" id="hp-zip" maxlength="5" value="Zip Code" placeholder="Zip Code">
+        <button id="hp-search-btn" class="btn-editorial">Search</button>
       </div>
     </div>
+  </div>
+</div>
+
+
+
+        <div id="page-content">
+            <div class="page-content-wrapper">
+
+
+
+
+
+<!-- Recommended for you /-->
+<div class="home-carousel-wrapper">
+  <div id="carousel-1">
+
+
+      </div>
+    </a>
+
+            </div>
+        <div class="modal-popup-container">
+    <div class="modal-popup-overlay"></div>
+    <div class="modal-popup">
+        <div class="modal-popup-x">×</div>
+        <div class="modal-popup-content"><div id="widget-create-shortlist-form" class="modal-content">
+  <h3 class="title">Create Your Shortlist</h3>
+  <form action="/shortlist/new" id="widget-create-shortlist" method="POST" class="standard-validation">
+    <div class="shortlist-form">
+  <div class="fieldset-wrapper">
+    <input id="shortlist_id" name="shortlist[id]" type="hidden">
+    <input id="shortlist_ownership_token" name="shortlist[ownership_token]" type="hidden">
+    <div class="input-wrapper name">
+      <label for="shortlist_name">Name of your shortlist</label>
+      <input class="required" id="shortlist_name" maxlength="64" name="shortlist[name]" placeholder="e.g., My Birthday" type="text">
+    </div>
+    <div class="input-wrapper event-date rescal-datepicker-wrapper">
+      <label for="shortlist_event_date">Delivery date</label>
+      <input class="rescal-date-widget" data-maxdate="24m" id="shortlist_event_date" name="shortlist[event_date]" placeholder="Delivery Date" type="text"><div id="grid-calendar" class="rescal-date-picker-widget" style="display:none;"><div class="s8-ico-close log" data-action="rezo_close"></div><div class="calendar-holder hasDatepicker" id="dp1413934086053"><div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon s32-next-arrow-white">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">October</span>&nbsp;<span class="ui-datepicker-year">2014</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th class="ui-datepicker-week-end"><span title="Sunday">Sun</span></th><th><span title="Monday">Mon</span></th><th><span title="Tuesday">Tue</span></th><th><span title="Wednesday">Wed</span></th><th><span title="Thursday">Thu</span></th><th><span title="Friday">Fri</span></th><th class="ui-datepicker-week-end"><span title="Saturday">Sat</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">1</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td></tr><tr><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled ui-datepicker-sunday" title="We do not deliver on this date"><span class="ui-state-default">5</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">7</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">8</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">9</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">10</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">11</span></td></tr><tr><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled ui-datepicker-sunday" title="We do not deliver on this date"><span class="ui-state-default">12</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">13</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">14</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">15</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">16</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">17</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">18</span></td></tr><tr><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled ui-datepicker-sunday" title="We do not deliver on this date"><span class="ui-state-default">19</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">20</span></td><td class=" ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="9" data-year="2014"><a class="ui-state-default ui-state-highlight" href="#">21</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2014"><a class="ui-state-default" href="#">22</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2014"><a class="ui-state-default" href="#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2014"><a class="ui-state-default" href="#">24</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2014"><a class="ui-state-default" href="#">25</a></td></tr><tr><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled ui-datepicker-sunday" title="We do not deliver on this date"><span class="ui-state-default">26</span></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2014"><a class="ui-state-default" href="#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2014"><a class="ui-state-default" href="#">28</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2014"><a class="ui-state-default" href="#">29</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2014"><a class="ui-state-default" href="#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2014"><a class="ui-state-default" href="#">31</a></td><td class=" ui-datepicker-week-end ui-datepicker-other-month" data-handler="selectDay" data-event="click" data-month="10" data-year="2014">&nbsp;</td></tr></tbody></table></div></div><div class="calendar-banner">We recommend choosing a delivery<br>date <span>1 DAY BEFORE</span> your event</div></div>
+      <input id="date_format" name="date_format" type="hidden" value="%m/%d/%Y">
+    </div>
+
+    <div class="actions">
+      <button class="btn-secondary-small cancel" id="button_cancel" name="button" type="button">Cancel</button>
+      <button class="btn-small create" id="button_create" name="submit" type="submit">Create</button>
+    </div>
+  </div>
+</div>
+
+  </form>
+</div></div>
+    </div>
+</div></div>
+
+        <div id="wishlist-container" class="hide"></div>
+
+        <!-- FOOTER -->
+    <div id="footer">
+            <div id="footer-top">
+  <div class="footer-row">
+    <div class="footer-content-area">
+      <h4 class="standard-subhead">customer care</h4>
+      <ul>
+        <li><a href="enter a valid HTML">How Bump Borrow Works</a></li>
+        <li><a href="enter a valid HTML">NEW Terms of Service</a></li>
+        <li><a href="enter a valid HTML">Gift Cards</a></li>
+      </ul>
+
   </div>
 </body>
 </html>
